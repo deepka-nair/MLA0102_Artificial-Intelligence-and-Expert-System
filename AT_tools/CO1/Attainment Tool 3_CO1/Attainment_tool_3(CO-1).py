@@ -1,24 +1,10 @@
-"""
-AI Search Algorithms — All 5 Game-Based Learning Activities (CO1)
-==================================================================
-1. AI Maze Escape        -> Breadth-First Search (BFS)
-2. N-Queens (12x12)      -> Backtracking / Constraint Satisfaction
-3. Water Jug Puzzle      -> BFS (State-Space Search)
-4. Connect Four AI       -> Minimax with Alpha-Beta Pruning
-5. 8-Puzzle              -> A* Search with Manhattan Distance Heuristic
-
-Run this file and choose which game to run from the menu,
-or choose "6" to run all five one after another.
-"""
 
 from collections import deque
 from heapq import heappush, heappop
 import math
 
+#1. AI MAZE ESCAPE — BFS Shortest Path
 
-# ======================================================================
-# 1. AI MAZE ESCAPE — BFS Shortest Path
-# ======================================================================
 def run_maze_escape():
     print("\n" + "=" * 60)
     print("1. AI MAZE ESCAPE — BFS Shortest Path")
@@ -58,10 +44,8 @@ def run_maze_escape():
         print(step)
     print("Number of steps taken:", len(path) - 1)
 
+#2. N-QUEENS CHALLENGE (12x12) — Backtracking Search
 
-# ======================================================================
-# 2. N-QUEENS CHALLENGE (12x12) — Backtracking Search
-# ======================================================================
 def run_n_queens():
     print("\n" + "=" * 60)
     print("2. N-QUEENS CHALLENGE (12x12) — Backtracking Search")
@@ -107,10 +91,8 @@ def run_n_queens():
 
     print("\nConflicts:", 0)
 
+#3. WATER JUG PUZZLE — BFS State-Space Search
 
-# ======================================================================
-# 3. WATER JUG PUZZLE — BFS State-Space Search
-# ======================================================================
 def run_water_jug():
     print("\n" + "=" * 60)
     print("3. WATER JUG PUZZLE — BFS State-Space Search")
@@ -147,10 +129,8 @@ def run_water_jug():
     for i, state in enumerate(solution):
         print(f"Step {i}: Jug A = {state[0]}L, Jug B = {state[1]}L")
 
+#4. CONNECT FOUR AI — Minimax with Alpha-Beta Pruning
 
-# ======================================================================
-# 4. CONNECT FOUR AI — Minimax with Alpha-Beta Pruning
-# ======================================================================
 def run_connect_four():
     print("\n" + "=" * 60)
     print("4. CONNECT FOUR AI — Minimax with Alpha-Beta Pruning")
@@ -265,9 +245,9 @@ def run_connect_four():
     print("Simulation complete.")
 
 
-# ======================================================================
-# 5. 8-PUZZLE — A* Search with Manhattan Distance Heuristic
-# ======================================================================
+
+# 5.8-PUZZLE — A* Search with Manhattan Distance Heuristic
+
 def run_eight_puzzle():
     print("\n" + "=" * 60)
     print("5. 8-PUZZLE — A* Search with Manhattan Distance Heuristic")
@@ -332,9 +312,9 @@ def run_eight_puzzle():
         print()
 
 
-# ======================================================================
-# MENU
-# ======================================================================
+
+#MENU
+
 def main():
     games = {
         "1": run_maze_escape,
